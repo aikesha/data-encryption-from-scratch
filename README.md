@@ -25,10 +25,11 @@ data-encryption-from-scratch/
 |   `-- app.js
 |-- tests/
 |   `-- test.py
-`-- examples/
-    `-- sample_run.ipynb
-```
-
+|-- examples/
+|   `-- sample_run.ipynb
+`-- results/
+    |-- encryption_time_comparison.png
+    `-- decryption_time_comparison.png
 ## Run Tests
 
 ```bash
@@ -43,6 +44,26 @@ python src/des.py
 python src/aes.py
 python src/3des.py
 ```
+
+
+
+## Benchmark Results
+
+The project also includes benchmarking experiments for DES, 3DES, and AES. The algorithms were tested using different input sizes, and the execution time was measured for both encryption and decryption.
+
+### Encryption Time Comparison
+
+The encryption time results show that AES achieved the lowest encryption time, while 3DES required the highest time because it applies DES three times for each block.
+
+![Encryption Time Comparison](results/encryption_time_comparison.png)
+
+### Decryption Time Comparison
+
+The decryption time results show that 3DES also had the highest decryption cost. DES and AES had lower decryption times, with DES being slightly faster in decryption because of its Feistel structure.
+
+![Decryption Time Comparison](results/decryption_time_comparison.png)
+
+
 
 ## Notes
 
