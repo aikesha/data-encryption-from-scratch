@@ -1,4 +1,3 @@
-// This file is written in a clear student style on purpose.
 // DES and 3DES are implemented manually. AES uses the browser Web Crypto API.
 
 // -----------------------------
@@ -392,21 +391,22 @@ function useSample() {
   }
 
   if (algorithm === "DES") {
-    getElement("messageInput").value = operation === "encrypt" ? "Hello DES" : "E9167AA16C791F5B0072B98577787088";
-    getElement("key1").value = "12345678";
+    getElement("messageInput").value = operation === "encrypt" ? "The biology final answers are hidden inside the hollow leg of the third table in the back of the silent study zone. Look for the red sticker." : "F7829BB509329F82F20A03B69CC29F7F0689B36C366B2CEB06ADFC3A88E41421C4B5B346656A16E12A9E1711C3406FD85B36F631BC87072D4B3DEAEFCEE1246EB2D7CE1396122F7EE2D7E2B3A8D3A62117404D0C937FBCD0049172E6601F5D120C52D95631DFA15E5931B1FE5AD33E073B9F30BBDD8D8A2E2E6DBE8F113849836150C121C56E562298E7AE3317642207";
+    getElement("key1").value = "BioHack1";
   }
 
   if (algorithm === "3DES") {
-    getElement("messageInput").value = operation === "encrypt" ? "Triple DES test" : "9ED5530DE212E95AFD49120CB4DD2E49";
-    getElement("key1").value = "12345678";
-    getElement("key2").value = "ABCDEFGH";
-    getElement("key3").value = "87654321";
+    getElement("messageInput").value = operation === "encrypt" ? "The Founders Circle will convene at 9:00 PM behind the old clock tower. Bring the blue notebook; it serves as your entry pass." : "60219A35A9F43D8D45D18C1E2292D85B3B927290C63EA02107CFD0E155717B487DF95DBB63E5561C2BF89ADDF440541DBB477D008FD9698633788428F4927E10C164BED63BDDFEBA026ECE6B7E3798696248429B022FFD850CE04F3D6FE0C6661792213CE0F5C6F0C41E889A2D34B3A5181A7FFD084152742891266BFFF50C25";
+    getElement("key1").value = "ClockTow";
+    getElement("key2").value = "erMidnig";
+    getElement("key3").value = "htCircle";
   }
 
   if (algorithm === "AES") {
-    getElement("messageInput").value = operation === "encrypt" ? "Modern AES example" : "Encrypt first, then switch to decrypt and use the saved ciphertext.";
-    getElement("key1").value = "1234567890ABCDEF";
+    getElement("messageInput").value = operation === "encrypt" ? "Access the basement through the service elevator using the keycard hidden in 'Introduction to Cryptography' in the library’s third floor, aisle four." : "2905E8AB4465959351D6E9DA3626555C:2704605AACEA135A8AC9A68083FD69758666489A8CEF330802E0DC894DE5555D32EEDC674781EC9998B145ACAD953B8C92D73D60253B95DB369FE2FBEA605E61353B8552FD4C31DBDD329D2D1A36EE89405E7A38948B03E3A44B627678F9B8EE90B2F0AD176CD8831EECD58FDC18BABB6CE55E9A7A4B2DC5EAD17048DD3F3E532D37808580C4ED3EBB18C8E804827B23FC775F4FFB35EC2130E151726FEAB00F";
+    getElement("key1").value = "DontTellTheDean!";
   }
+
 }
 
 getElement("cryptoForm").addEventListener("submit", async (event) => {
