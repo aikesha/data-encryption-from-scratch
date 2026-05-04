@@ -1,0 +1,225 @@
+:root {
+  --page: #edf2f5;
+  --panel: #ffffff;
+  --ink: #17212a;
+  --muted: #526778;
+  --line: #c4d1dc;
+  --field: #f8fafc;
+  --accent: #c33f2e;
+  --accent-dark: #9f3023;
+  --teal: #00646a;
+  --shadow: 0 24px 55px rgba(35, 48, 58, 0.16);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--page);
+}
+
+.page-shell {
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 18px 0 56px;
+}
+
+.course {
+  margin: 0 0 14px;
+  color: #355d73;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 10px;
+  max-width: 820px;
+  font-size: clamp(48px, 7vw, 78px);
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+.intro {
+  margin: 0 0 4px;
+  color: #17324a;
+  font-size: 16px;
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.input-panel, .output-panel, .scenarios-panel { padding: 18px; }
+
+.control-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+label span, .small-label {
+  display: block;
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+select, textarea, input {
+  width: 100%;
+  border: 1px solid #b9c9d5;
+  border-radius: 6px;
+  background: var(--field);
+  color: #001b2e;
+  font: inherit;
+}
+
+select, input { height: 44px; padding: 0 14px; }
+
+textarea {
+  min-height: 193px;
+  margin-top: 0;
+  padding: 16px 14px;
+  resize: vertical;
+}
+
+.full-field { display: block; margin-top: 18px; }
+
+.key-fields {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.key-fields.three { grid-template-columns: repeat(3, 1fr); }
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+button {
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid #b8ccd8;
+  border-radius: 7px;
+  background: #f6fafc;
+  color: #001827;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:hover { border-color: #879daa; }
+
+.primary-button {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: white;
+}
+
+.primary-button:hover { background: var(--accent-dark); }
+
+.output-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.output-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+h2, h3 { margin: 0; letter-spacing: 0; }
+
+.output-top h2 { font-size: 18px; }
+
+#outputBox {
+  min-height: 280px;
+  margin: 0;
+  padding: 16px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border: 1px solid #b9c9d5;
+  border-radius: 6px;
+  background: var(--field);
+  color: #000;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 13px;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.metric-card {
+  min-height: 68px;
+  padding: 15px 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--field);
+}
+
+.metric-card strong { font-size: 16px; }
+.time-card { min-width: 138px; }
+.time-card strong { color: var(--teal); }
+
+.scenarios-panel { margin-top: 16px; }
+.scenarios-panel h2 { margin-bottom: 14px; font-size: 18px; }
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.scenario-grid article {
+  min-height: 180px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--field);
+}
+
+.scenario-grid h3 { margin-bottom: 10px; font-size: 16px; }
+.scenario-grid p { margin: 0 0 14px; color: #19384f; line-height: 1.45; }
+.scenario-grid pre {
+  margin: 0;
+  padding-left: 10px;
+  border-left: 3px solid var(--accent);
+  overflow-x: auto;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.error { color: #a82618; }
+
+@media (max-width: 850px) {
+  .workspace-grid, .scenario-grid, .control-row, .metric-grid { grid-template-columns: 1fr; }
+  .key-fields.three { grid-template-columns: 1fr; }
+  h1 { font-size: 46px; }
+  .output-top { align-items: stretch; flex-direction: column; }
+}
