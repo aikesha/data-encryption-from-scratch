@@ -1,6 +1,6 @@
 # Data Encryption From Scratch
 
-Hi! I am Aigerim, and this project is my ECE 6357 final project demo for trying DES, 3DES, and AES encryption/decryption algorithms.
+Hi! I am Aigerim, and this project is my ECE 6357 final project demo for trying DES, 3DES, and AES-128 encryption/decryption algorithms.
 
 The website lets a user choose an algorithm, choose encrypt or decrypt, enter text or ciphertext, enter the required key(s), and see how much time the operation took.
 
