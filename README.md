@@ -1,8 +1,8 @@
 # Data Encryption From Scratch
 
-ECE 6357 final project demo for DES, 3DES, and AES-128 encryption/decryption.
+Hi! I am Aigerim, and this project is my ECE 6357 final project demo for trying DES, 3DES, and AES encryption/decryption algorithms.
 
-The Python code is written in a clear student-style format and follows the original notebook logic. The `demo/` folder is a static website that can be hosted with GitHub Pages.
+The website lets a user choose an algorithm, choose encrypt or decrypt, enter text or ciphertext, enter the required key(s), and see how much time the operation took.
 
 ## Project Structure
 
@@ -44,13 +44,8 @@ python src/aes.py
 python src/3des.py
 ```
 
-## Open the Demo Website
-
-Open `demo/index.html` in a browser, or host the repository with GitHub Pages and set the Pages source to the repository branch. The demo supports DES, 3DES, and AES-128 encryption/decryption and displays the time spent for each operation.
-
 ## Notes
 
-- DES uses an 8-character key.
-- 3DES uses three 8-character keys and the EDE process: encrypt, decrypt, encrypt.
+- DES/3DES uses an 8-character key.
 - AES uses a 16-character AES-128 key.
 - Ciphertext is shown as hexadecimal text so it is easy to copy back into the decrypt operation.
