@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aigerim's Encryption Demo</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="intro">
+        <p class="eyebrow">ECE 6357 Final Project</p>
+        <h1>DES, 3DES, and AES Demo</h1>
+        <p class="intro-text">
+          Hi! I am Aigerim, and here you can try DES, 3DES, and AES encr/decr algos.
+        </p>
+      </section>
+
+      <section class="layout">
+        <form class="panel form-panel" id="cryptoForm">
+          <div class="two-column">
+            <label>
+              <span>Algorithm</span>
+              <select id="algorithmSelect">
+                <option value="DES">DES</option>
+                <option value="3DES">3DES</option>
+                <option value="AES">AES</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Operation</span>
+              <select id="operationSelect">
+                <option value="encrypt">Encrypt</option>
+                <option value="decrypt">Decrypt</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            <span id="messageLabel">Plaintext</span>
+            <textarea id="messageInput" spellcheck="false">Hello from Aigerim</textarea>
+          </label>
+
+          <div id="keyFields" class="key-fields"></div>
+
+          <div class="actions">
+            <button class="primary" type="submit" id="runButton">Encrypt</button>
+            <button type="button" id="sampleButton">Use Sample</button>
+            <button type="button" id="clearButton">Clear</button>
+          </div>
+        </form>
+
+        <section class="panel result-panel" aria-live="polite">
+          <div class="result-header">
+            <div>
+              <p class="eyebrow">Output</p>
+              <h2 id="resultTitle">Ciphertext</h2>
+            </div>
+            <div class="time-card">
+              <span id="timeLabel">Time</span>
+              <strong id="timeValue">0.000 ms</strong>
+            </div>
+          </div>
+          <pre id="resultBox">Choose an algorithm and press Encrypt.</pre>
+          <div class="mini-grid">
+            <div>
+              <span>Input bytes</span>
+              <strong id="inputBytes">0</strong>
+            </div>
+            <div>
+              <span>Output bytes</span>
+              <strong id="outputBytes">0</strong>
+            </div>
+            <div>
+              <span>Mode</span>
+              <strong id="modeName">DES Encrypt</strong>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="panel scenarios">
+        <div class="section-title">
+          <p class="eyebrow">Try These Inputs</p>
+          <h2>Possible Input Scenarios</h2>
+        </div>
+        <div class="scenario-grid">
+          <article>
+            <h3>DES</h3>
+            <p>Use an 8-character key. Good for seeing a classic 64-bit block cipher with padding.</p>
+            <code>Plaintext: Hello DES<br>Key: 12345678</code>
+          </article>
+          <article>
+            <h3>3DES</h3>
+            <p>Use three 8-character keys. It runs DES as encrypt, decrypt, encrypt.</p>
+            <code>Plaintext: Triple DES test<br>Keys: 12345678, ABCDEFGH, 87654321</code>
+          </article>
+          <article>
+            <h3>AES</h3>
+            <p>Use a 16-character key. This demo uses browser AES-CBC and includes the IV with the result.</p>
+            <code>Plaintext: Modern AES example<br>Key: 1234567890ABCDEF</code>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

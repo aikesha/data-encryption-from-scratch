@@ -1,0 +1,290 @@
+:root {
+  --bg: #eceff1;
+  --panel: #ffffff;
+  --field: #f6f8f9;
+  --canvas: #e5eaed;
+  --text: #1d2429;
+  --muted: #65737c;
+  --border: #cfd8dd;
+  --field-border: #bac7cf;
+  --button: #eef2f4;
+  --button-border: #bac7cf;
+  --button-text: #1d2429;
+  --accent: #b6422c;
+  --accent-dark: #8f301f;
+  --accent-text: #ffffff;
+  --ok: #2f6b5f;
+  --shadow: 0 14px 32px rgba(30, 39, 46, 0.12);
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.page {
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 38px;
+}
+
+.intro {
+  min-height: 160px;
+  display: grid;
+  align-content: center;
+  gap: 12px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  max-width: 860px;
+  font-size: clamp(2.2rem, 6vw, 4.8rem);
+  line-height: 0.96;
+}
+
+h2 {
+  font-size: 1.15rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+.intro-text {
+  max-width: 760px;
+  color: #38464d;
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+
+.eyebrow,
+label span,
+.time-card span,
+.mini-grid span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
+  gap: 16px;
+}
+
+.panel {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.form-panel,
+.key-fields {
+  display: grid;
+  gap: 16px;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+}
+
+textarea,
+input,
+select,
+pre {
+  width: 100%;
+  border: 1px solid var(--field-border);
+  border-radius: 7px;
+  background: var(--field);
+  color: var(--text);
+}
+
+textarea {
+  min-height: 194px;
+  resize: vertical;
+  padding: 14px;
+}
+
+input,
+select {
+  min-height: 44px;
+  padding: 0 12px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  min-height: 42px;
+  border: 1px solid var(--button-border);
+  border-radius: 7px;
+  background: var(--button);
+  color: var(--button-text);
+  cursor: pointer;
+  padding: 0 16px;
+  font-weight: 700;
+}
+
+button:hover,
+button:focus-visible {
+  border-color: var(--accent);
+}
+
+.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.primary:hover,
+.primary:focus-visible {
+  background: var(--accent-dark);
+}
+
+.result-panel {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 14px;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.time-card {
+  min-width: 138px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--field);
+  padding: 10px 12px;
+}
+
+.time-card strong {
+  display: block;
+  margin-top: 3px;
+  color: var(--ok);
+  font-size: 1.05rem;
+}
+
+pre {
+  min-height: 260px;
+  margin: 0;
+  overflow: auto;
+  padding: 14px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mini-grid div {
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--field);
+  padding: 10px;
+}
+
+.mini-grid strong {
+  display: block;
+  margin-top: 4px;
+  overflow-wrap: anywhere;
+}
+
+.scenarios {
+  margin-top: 16px;
+}
+
+.section-title {
+  margin-bottom: 14px;
+}
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.scenario-grid article {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--field);
+  padding: 14px;
+}
+
+.scenario-grid p {
+  margin: 8px 0 12px;
+  color: #405058;
+  line-height: 1.45;
+}
+
+code {
+  display: block;
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+  color: #2a3338;
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .layout,
+  .scenario-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .two-column,
+  .mini-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
