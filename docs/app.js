@@ -392,8 +392,8 @@ function useSample() {
   }
 
   if (algorithm === "DES") {
-    getElement("messageInput").value = operation === "encrypt" ? "The biology final answers are hidden inside the hollow leg of the third table in the back of the silent study zone. Look for the red sticker." : "F7829BB509329F82F20A03B69CC29F7F0689B36C366B2CEB06ADFC3A88E41421C4B5B346656A16E12A9E1711C3406FD85B36F631BC87072D4B3DEAEFCEE1246EB2D7CE1396122F7EE2D7E2B3A8D3A62117404D0C937FBCD0049172E6601F5D120C52D95631DFA15E5931B1FE5AD33E073B9F30BBDD8D8A2E2E6DBE8F113849836150C121C56E562298E7AE3317642207";
-    getElement("key1").value = "BioHack1";
+    getElement("messageInput").value = operation === "encrypt" ? "Hello DES" : "E9167AA16C791F5B0072B98577787088";
+    getElement("key1").value = "12345678";
   }
 
   if (algorithm === "3DES") {
