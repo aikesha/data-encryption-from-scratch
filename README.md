@@ -19,7 +19,7 @@ data-encryption-from-scratch/
 |   |-- aes.py
 |   |-- aes_utils.py
 |   `-- aes_tables.py
-|-- demo/
+|-- docs (demo)/
 |   |-- index.html
 |   |-- style.css
 |   `-- app.js
